@@ -39,9 +39,16 @@ html{
 }
 
 .content{
-  max-width:100%;
+  /*max-width:1600px;*/
   display:flex;
   padding: 2rem 0rem 2rem 1.5rem;
+
+}
+
+@media only screen and (max-width: 1260px){
+.content{
+  max-width:1260px;
+}
 }
 
 .content.banner{
@@ -60,6 +67,7 @@ html{
 .banner-photo img{
   max-width:100%;
   height:auto;
+  overflow: hidden;
 }
 
 .banner-text{
@@ -78,6 +86,8 @@ h1 {
 
 
 }
+
+
 
 h3 {
   font-size: 2.5rem;
@@ -127,6 +137,21 @@ span{
   line-height: 1.2;
 }
 
+@media only screen and (max-width: 1260px){
+h1{
+  font-size: 4rem;
+}
+
+h3{
+  font-size:2rem;
+}
+
+
+
+}
+
+
+
 .logo span{
   margin-bottom: 0;
 }
@@ -165,14 +190,14 @@ a:visited{
 
  .row img{
   width:35%;
-  height:auto;
+  /*height:auto;*/
   margin-right: 1rem;
 
 }
 
 .row h3{
   /*width:65%;*/
-  height:auto;
+  /*height:auto;*/
   line-height: 3rem;
 }
 
@@ -213,7 +238,7 @@ p{
 }
 
 .information {
-  width:40%;
+  max-width:40%;
   /*border-left:1px solid grey;*/
   /*border: 1px solid black;*/
 }
