@@ -74,7 +74,9 @@ header{
   }
 
 
-
+.menu-mobile{
+  display:none;   /**it will be used for mobile version of site**/
+}
 
 
 .logo {                         /**used for centering of image and logo banner. !!!I will try to do it without flex**/
@@ -178,6 +180,10 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
     margin-right:1rem;
   }
 
+ .mobile {
+   display:none;
+ }
+
   .description {
   width: 65%;
   }
@@ -216,30 +222,58 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
 .container.courses h1{
   margin-bottom: 2rem;
   text-align: center;
+
 }
 
 .boxes{
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /*justify-content: space-around;*/
+  /*justify-content: space-around;*/
+  justify-content: center;
+  /*margin-right:0;
+  margin-left:0;
+  padding:right:0;*/
+
 }
 
 .box{
-  width:32%;
+  max-width:31.75%;
+  /*box-sizing: border-box;*/
+  background-color: white;
+  opacity:0.5;
+  transition: opacity 200ms ease-in 300ms;
   /*border: 1px solid black;*/
+  /*flex-grow: 1;*/
 }
 
+.box:hover{
+  opacity:1;
+}
 .box:nth-child(n+1){
   margin-bottom: 2rem;
 }
 
+.box:nth-child(2), .box:nth-child(5){
+  margin-left:2rem;
+  margin-right: 2rem;
+}
+
 .container.courses span{
   font-size: 1.2rem;
+  /*display:block;*/
+  /*max-width:100%;
+
+  box-sizing: border-box;*/
+  /*overflow: hidden;*/
 }
 
 .box div{
+  width:100%;
+  /*box-sizing: border-box;*/
   padding:1rem 1rem 1.5rem 1rem;
-}
+  box-sizing: border-box;
+  }
 
 .box span:nth-child(2){
   margin-bottom:0.5rem;
@@ -272,6 +306,8 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
   padding-top:1rem;
 }
 
+
+/******** footer section ************/
 footer {
   padding: 0rem 1.5rem 1rem 1.5rem;
 
@@ -290,4 +326,175 @@ footer {
 
 footer span{
   font-size:1.2rem;
+}
+
+
+
+@media only screen and (max-width:560px){
+
+.menu, .logo {
+  display:none;
+}
+
+.menu-mobile{
+  width:100%;
+  display:block;
+}
+
+ul{
+  justify-content: space-between;
+}
+
+/**banner section for mobile ***/
+
+.container.banner {
+  padding:0;
+}
+
+.container.banner .right {
+  width:100%;
+  padding:2rem 1rem;
+  box-sizing: border-box;
+}
+
+.right h1{
+  margin-bottom:2rem;
+  font-size:4rem;
+}
+
+.container.banner .left{
+  width:100%;
+  margin:0;
+}
+
+.container.banner .section-one{
+  flex-direction: column;
+
+}
+
+.btn{
+  width:100%;
+}
+
+/**main section for mobile ***/
+
+.container.main{
+  padding:1rem 1rem 0rem 1rem;
+}
+.container.main .left{
+  display:none;
+}
+.container.main .right{
+  width:100%;
+}
+
+.row {
+flex-direction:column;
+
+}
+
+.pc {
+  display:none;
+}
+
+.mobile{
+  display:block;
+
+}
+.row .foto{
+  width:100%;
+  margin-right:0;
+}
+
+
+.row:nth-child(1), .row:nth-child(2), .row:nth-child(3){
+  padding:0;
+}
+
+
+
+.description{
+  width:100%;
+  box-sizing: border-box;
+  padding:1rem 1rem 4rem 1rem;
+}
+
+.back-color{
+  background-color:white;
+}
+
+/**courses section for mobile ***/
+.container.courses {
+  padding:0 1rem 2rem 1rem;
+}
+
+.container.courses h1{
+  font-size: 4rem;
+}
+
+.boxes {
+  flex-direction: column;
+}
+.box{
+  max-width:100%;
+  padding:1rem 0 1.5rem 0rem;
+  background-color:#e6e6e6;
+  opacity:1;
+  box-sizing: border-box;
+
+}
+.box h3{
+  width:100%;
+}
+
+.box:nth-child(n+1){
+  margin-bottom:0.5rem;
+}
+
+.box:nth-child(2), .box:nth-child(5){
+  margin-right:0;
+  margin-left:0;
+
+}
+.box span, .box img{
+  display:none;
+}
+/**exhibit section for mobile ***/
+
+.container.exhibit {
+  padding: 2rem 0 1.5rem 0;
+}
+
+.container.exhibit .right{
+  display: none;
+}
+
+.container.exhibit .main-text {
+    display:none;
+  }
+
+.container.exhibit .left{
+   width:100%;
+   margin-right:0;
+  }
+
+.container.exhibit h1{
+  font-size:4rem;
+  margin-bottom: 1rem;
+}
+
+/*footer section for mobile*/
+.border {
+  display:none;
+}
+
+footer {
+  padding:1rem;
+}
+.copy-rights{
+  justify-content: center;
+}
+.copy-rights span:nth-child(2){
+  display:none;
+}
 }
