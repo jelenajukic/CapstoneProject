@@ -328,9 +328,66 @@ footer span{
   font-size:1.2rem;
 }
 
+@media only screen and (max-width:1495px){
+  h1 {
+    font-size:3rem;
+  }
+
+  h3, .row h3, .container.courses h3{
+    font-size: 1.5rem;
+  }
+
+p, .container.exhibit p{
+  font-size: 1rem;
+}
+
+ .container.courses span, .container.main span{
+  font-size:0.95rem;
+}
+
+  .box {
+    max-width:25%;
+  }
+}
+
+@media only screen and (max-width:1070px){
+  h1 {
+    font-size:2.5rem;
+  }
+
+  .row {
+  flex-direction:column;
+
+  }
+
+  .row .foto{
+    width:100%;
+    margin-right:0;
+  }
 
 
-@media only screen and (max-width:560px){
+
+  .description{
+    width:100%;
+    box-sizing: border-box;
+    /*padding:1rem 1rem 4rem 1rem;*/
+  }
+
+  .pc {
+    display:none;
+  }
+
+  .mobile{
+    display:block;
+
+  }
+
+  /*.back-color{
+    background-color:white;
+  }*/
+
+}
+@media only screen and (max-width:865px) {
 
 .menu, .logo {
   display:none;
@@ -381,14 +438,20 @@ ul{
 .container.main{
   padding:1rem 1rem 0rem 1rem;
 }
+
 .container.main .left{
   display:none;
 }
+
 .container.main .right{
   width:100%;
 }
 
-.row {
+.container.main span{
+  font-size:1.2rem;
+}
+
+/*.row {
 flex-direction:column;
 
 }
@@ -404,7 +467,7 @@ flex-direction:column;
 .row .foto{
   width:100%;
   margin-right:0;
-}
+}*/
 
 
 .row:nth-child(1), .row:nth-child(2), .row:nth-child(3){
@@ -435,20 +498,29 @@ flex-direction:column;
 .boxes {
   flex-direction: column;
 }
+
 .box{
   max-width:100%;
-  padding:1rem 0 1.5rem 0rem;
+
   background-color:#e6e6e6;
   opacity:1;
   box-sizing: border-box;
+  /*height:auto;*/
 
+}
+
+.box div{
+  padding:1rem 0 1.5rem 1rem;
+  box-sizing: border-box;
 }
 .box h3{
   width:100%;
+  box-sizing: border-box;
 }
 
 .box:nth-child(n+1){
   margin-bottom:0.5rem;
+  /*padding:0;*/
 }
 
 .box:nth-child(2), .box:nth-child(5){
