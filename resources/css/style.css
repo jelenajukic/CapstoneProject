@@ -47,7 +47,7 @@ a:visited {
 
 .container {                             /**common class for all sections on the page excluding header and footer**/
   padding:2rem 0rem 2rem 1.5rem;
-  position:relative;
+  position:relative;            /*position relative & top = 64 px because of fixed header. All sections are lowered 4rem (= to height of header)*/
   top:4rem;
 }
 
@@ -143,14 +143,15 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
 /*********banner section*******/
 
 
-.section-one{
+.section-one{                             /*I introduced this div before i was aware of box-sizing property. */
 
   width:100%;
   display: flex;
 
 }
 
-.left{
+.left{                                        /*all sections on page have left and right side. I used .left & .right classes as a common classes for all sections.
+                                                   Deeper inside divs with .left and .right classes I made code more specific for section */
   width:60%;
   margin-right:1.5rem;
   /*border:1px solid black;*/
@@ -166,7 +167,7 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
   margin-bottom:1.5rem;
 }
 
-.btn {
+.btn {                                             /*Learn more button in banner section. It hase also hover property*/
   background-color:#4d4d4d;
   text-align:center;
   width:90%;
@@ -336,10 +337,11 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
 }
 
 
-/******** footer section ************/
+/******** footer section ************/  /*sticky footer with position: relative, bottom:0*/
 footer {
   padding: 0rem 1.5rem 1rem 1.5rem;
-  position: relative;                       /*sticky footer with position: relative, bottom:0*/
+  position:relative;
+  top:4rem;                                    /*position relative & top = 64 px because of fixed header. All sections are lowered 4rem (= to height of header)*/
   bottom:0;
 
 }
@@ -348,6 +350,8 @@ footer {
 
   margin-bottom:1rem;
   border-top: 2px solid #e6e6e6;
+  position:relative;
+  top:4rem;
 }
 
 .copy-rights{
