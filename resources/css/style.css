@@ -276,15 +276,44 @@ li:nth-child(1), li:nth-child(2), li:nth-child(3){  /**space between li elements
   max-width:31.75%;
   /*box-sizing: border-box;*/
   background-color: white;
-  opacity:0.75;
+  /*opacity:0.75;*/
   transition: opacity 200ms ease-in 300ms;               /*hover effect*/
   /*border: 1px solid black;*/
   /*flex-grow: 1;*/
+  border: 1px solid #e6e6e6;
+
+
 }
 
-.box:hover{
-  opacity:1;
+.image-container  {
+
+  max-width: 100%;
+  overflow:hidden;
 }
+
+.image-container img{
+
+  opacity:0.5;
+  /*-webkit-transition: all 1s ease; /* Safari and Chrome */
+  /*-moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+  overflow:hidden;  /*added*/
+}
+
+.image-container:hover img{
+  opacity: 1;
+
+  overflow:hidden;
+  -webkit-transform:scale(1.3); /* Safari and Chrome */
+  -moz-transform:scale(1.3); /* Firefox */
+  -ms-transform:scale(1.3); /* IE 9 */
+  -o-transform:scale(1.3); /* Opera */
+   transform:scale(1.3);
+
+}
+
 .box:nth-child(n+1){                               /*spacing between two rows of items. One row conatins 3 box items*/
   margin-bottom: 2rem;
 }
